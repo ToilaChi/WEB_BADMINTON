@@ -9,6 +9,7 @@
     <link href="{%static 'app/css/style.css'%}" rel="stylesheet">
     <link href="{%static 'app/css/owl.carousel.min.css'%}" rel="stylesheet">
     <link href="{%static 'app/css/allmin.css'%}" rel="stylesheet">
+    <link href="{%static 'app/css/yard-css.css'%}" rel="stylesheet">
 
     <!--bootstrap java-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -17,20 +18,21 @@
     <script src="{%static 'app/js/s3.js'%}" > </script>
     <script src="{%static 'app/js/all.min.js'%}" > </script>
     <script src="{%static 'app/js/myscrip.js'%}" > </script>
+    <script src="{%static 'app/js/yard-js.js'%}" > </script>
   
     <title>web badminton</title>
 </head>
     <body>
         <!-- bắt đầu thanh navbar-->
-            <nav class="navbar navbar-expand-lg bg-light">  
+        <header>  
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">  
                 <div class="container-fluid">  
-                    <a class="navbar-brand" href="#">  
-                        <img src="{% static 'app/images/logo.png' %}" width="70" height="70">  
+                    <a class="navbar-logo">  
+                        <img src="{% static 'app/images/logo.png' %}" width="100px" height="80px">  
                     </a>  
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">  
-                        <span class="navbar-toggler-icon"></span>  
+
                     </button>  
-                    <div class="collapse navbar-collapse">  
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">  
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">  
                             <li class="nav-item">  
                                 <a class="nav-link active" aria-current="page" href="#">Trang Chủ</a>  
@@ -38,16 +40,24 @@
                             <li class="nav-item">  
                                 <a class="nav-link" href="#">Địa Chỉ</a>  
                             </li>  
-                            <li class="nav-item">  
-                                <a class="nav-link" href="#">Lịch Sử Đặt Sân</a>  
+                            <li class="nav-item dropdown">  
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">  
+                                    Tài Khoản   
+                                </a>  
+                                <ul class="dropdown-menu">  
+                                    <li><a class="dropdown-item" href="#">Cài Đặt</a></li>  
+                                    <li><a class="dropdown-item" href="#">Thông Tin Người Dùng</a></li>  
+                                    <li><hr class="dropdown-divider"></li>  
+                                </ul>  
                             </li>  
                             <li class="nav-item">  
-                                <a class="nav-link" href="#">Tài Khoản</a>  
+                                <a class="nav-link disabled" href="#" aria-disabled="true">hướng dẫn đặt sân</a>  
                             </li>  
-                        </ul>   
+                        </ul>  
                     </div>  
                 </div>  
-            </nav> 
+            </nav>  
+        </header> 
         <!-- kết thúc thanh navbar-->
 
         <!--main body-->
@@ -58,7 +68,7 @@
             <div class="footer-content">  
                 <div class="left-section">  
                     <h1>Contact Us</h1>  
-                    <p>info@example.com</p>                        
+                    <p>badminton@gmail.com</p>                        
                 </div>  
                 <div class="center-section">  
                     <h2>Follow Us</h2>  
@@ -66,7 +76,8 @@
                 </div>  
                 <div class="right-section">  
                     <h2>Company Info</h2>  
-                    <p>Address, Phone Number</p>  
+                    <p> 353/7A Bình Quới, Phường 28, Bình Thạnh, Hồ Chí Minh</p>
+                    <p> số điện thoại:  0969 774 372 </p>  
                 </div>  
             </div>  
         </footer>       

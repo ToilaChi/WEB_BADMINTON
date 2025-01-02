@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Đặt Sân Cầu Lông - Ways Station Badminton</title>
+    <link rel="stylesheet" href="app/css/yard-css.css" />
+    <script src="{%static 'app/js/yard-css.css'%}"></script>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-left">
+        <div class="header-title">
+          Đặt sân theo giờ - Ways Station Badminton
+        </div>
+        <button class="date-picker">02/01/2025</button>
+      </div>
+      <div>Khách đặt lịch cố định: Gọi 0389145575</div>
+    </div>
+
+    <div class="locations">
+      <div class="location">
+        <span>📍</span>
+        <span>NVL = 70 Nguyễn Văn Lượng, P. 10, Gò Vấp</span>
+      </div>
+      <div class="location">
+        <span>📍</span>
+        <span>DQH = 262 Dương Quảng Hàm, Gò Vấp</span>
+      </div>
+      <div class="location">
+        <span>📍</span>
+        <span>NQA = 86 Nguyễn Quý Anh, Tân Phú</span>
+      </div>
+      <div class="location">
+        <span>📍</span>
+        <span>HB = 135 Hiệp Bình, Thủ Đức</span>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-color empty"></div>
+        <span>Trống</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color booked"></div>
+        <span>Đã đặt</span>
+      </div>
+      <div class="legend-item">
+        <div class="legend-color selected"></div>
+        <span>Đang chọn</span>
+      </div>
+    </div>
+
+    <table class="booking-table">
+      <thead>
+        <tr>
+          <th>Chi nhánh</th>
+          <th>Sân</th>
+          <th>0:15-1:15</th>
+          <th>1:30-2:30</th>
+          <th>2:35-3:25</th>
+          <th>3:30-4:30</th>
+          <th>4:35-5:35</th>
+          <th>5:40-6:40</th>
+          <th>6:45-7:45</th>
+          <th>8:00-9:00</th>
+          <th>9:05-10:05</th>
+          <th>10:10-11:10</th>
+          <th>11:15-12:15</th>
+          <th>12:20-13:20</th>
+          <th>13:25-14:25</th>
+          <th>14:30-15:30</th>
+          <th>15:35-16:35</th>
+          <th>16:40-17:40</th>
+          <th>17:45-18:45</th>
+          <th>19:00-20:00</th>
+          <th>20:05-21:05</th>
+          <th>21:10-22:10</th>
+          <th>22:15-23:15</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="court-name">CN NVL</td>
+          <td>Sân 1</td>
+          <td class="slot empty"></td>
+          <td class="slot booked"></td>
+          <td class="slot empty"></td>
+          <!-- Thêm các ô còn lại -->
+        </tr>
+        <tr>
+          <td class="court-name">CN NVL</td>
+          <td>Sân 2</td>
+          <td class="slot empty"></td>
+          <td class="slot empty"></td>
+          <td class="slot selected"></td>
+          <!-- Thêm các ô còn lại -->
+        </tr>
+        <!-- Thêm các hàng cho CN DQH -->
+        <tr>
+          <td class="court-name">CN DQH</td>
+          <td>Sân 1</td>
+          <td class="slot empty"></td>
+          <td class="slot empty"></td>
+          <td class="slot booked"></td>
+          <!-- Thêm các ô còn lại -->
+        </tr>
+        <!-- Thêm các hàng cho các sân khác -->
+      </tbody>
+    </table>
+
+    <div class="footer">
+      <div class="total">Đang chọn: 0h00</div>
+      <div class="total">Tổng: 0 đ</div>
+      <button class="next-button">Tiếp theo</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
