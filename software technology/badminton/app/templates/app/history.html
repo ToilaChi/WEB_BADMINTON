@@ -1,0 +1,44 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block main_content %}
+<div class="history-container custom-history">  
+    <h1 class="history-title">Lịch Sử Đặt Sân</h1>  
+    <table class="history-table">  
+        <thead class="history-thead">  
+            <tr>  
+                <th class="history-th">Ngày Đặt</th>  
+                <th class="history-th">Loại Sân</th>  
+                <th class="history-th">Check-in</th>  
+                <th class="history-th">Giá Tiền</th>  
+            </tr>  
+        </thead>  
+        <tbody class="history-tbody">  
+            <tr class="history-row">  
+                <td class="history-cell">01/01/2023</td>  
+                <td class="history-cell">Sân Tennis</td>  
+                <td class="history-cell">10:00 AM</td>  
+                <td class="history-cell">300.000 VNĐ</td>  
+            </tr>  
+            <tr class="history-row">  
+                <td class="history-cell">15/01/2023</td>  
+                <td class="history-cell">Sân Bóng Đá</td>  
+                <td class="history-cell">04:00 PM</td>  
+                <td class="history-cell">500.000 VNĐ</td>  
+            </tr>  
+            <tr class="history-row">  
+                <td class="history-cell">25/01/2023</td>  
+                <td class="history-cell">Sân Cầu Lông</td>  
+                <td class="history-cell">06:30 PM</td>  
+                <td class="history-cell">150.000 VNĐ</td>  
+            </tr>  
+            <tr class="history-row">  
+                <td class="history-cell">10/02/2023</td>  
+                <td class="history-cell">Sân Golf</td>  
+                <td class="history-cell">08:00 AM</td>  
+                <td class="history-cell">1.200.000 VNĐ</td>  
+            </tr>  
+        </tbody>  
+    </table>  
+</div> 
+{% endblock main_content %}
+{% block footer %}{% endblock footer %}

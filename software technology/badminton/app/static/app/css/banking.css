@@ -1,0 +1,101 @@
+.banking-container {  
+    background-color: #002B36; /* Dark background color */  
+    color: white; /* White text color */  
+    padding: 20px; /* Container padding */  
+    border-radius: 10px; /* Rounded corners */  
+    max-width: 600px; /* Max width of the container */  
+    margin: auto; /* Center align */  
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Shadow effect */  
+    margin-top: 40px;  
+    margin-bottom: 20px;  
+}  
+
+/* Title styling */  
+.banking-header h1 {  
+    margin-bottom: 20px; /* Space below the title */  
+    font-size: 24px; /* Font size for title */  
+    color: #ffff;
+}  
+
+/* Bank information group styling */  
+.bank-info-group {  
+    margin-bottom: 20px; /* Space between info groups */  
+}  
+
+/* Individual bank info row */  
+.bank-info-row {  
+    display: flex; /* Flexbox for layout */  
+    justify-content: space-between; /* Space between label and value */  
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Separator line */  
+    padding: 10px 0; /* Padding for each row */  
+}  
+
+/* Label styling */  
+.bank-info-label {  
+    font-weight: bold; /* Bold for labels */  
+}  
+
+/* Value styling */  
+.bank-info-value {  
+    color: #FFCC00; /* Golden color for values */  
+}  
+
+/* QR code section styling */  
+.qr-banking-section {  
+    text-align: center; /* Center content */  
+    margin: 20px 0; /* Vertical margin */  
+}  
+
+.qr-code-container {  
+    margin-bottom: 15px; /* Space below the QR code */  
+}  
+
+/* Payment instruction styling */  
+.banking-instructions {  
+    font-size: 14px; /* Smaller font size for instructions */  
+}  
+
+/* Button group styling */  
+.banking-button-group {  
+    display: flex; /* Flexbox layout for button group */  
+    justify-content: space-between; /* Space between buttons */  
+}  
+
+/* General button styling */  
+.banking-btn {  
+    flex: 1; /* Button takes full height */  
+    padding: 10px; /* Button padding */  
+    border: none; /* No border */  
+    border-radius: 5px; /* Rounded corners for buttons */  
+    cursor: pointer; /* Pointer cursor on hover */  
+    margin: 0 5px; /* Space around buttons */  
+}  
+
+/* Back button styling */  
+.banking-btn-back {  
+    background-color: #e57373; /* Red background for back button */  
+    color: white; /* White text color */  
+    text-decoration: none; /* No underline */  
+    display: block; /* Block display for full-width */  
+    width: 100%; /* Full width */  
+    text-align: center; /* Center align text */  
+}  
+
+/* Confirm button styling */  
+.banking-btn-confirm {  
+    background-color: #4CAF50; /* Green background for confirm button */  
+    color: white; /* White text color */  
+}  
+
+/* Hover effect for buttons */  
+.banking-btn:hover {  
+    opacity: 0.9; /* Slightly transparent on hover */  
+}  
+
+.banking-btn-back:hover {  
+    opacity: 0.9; /* Hover effect for back button */  
+}  
+
+.banking-btn-confirm:hover {  
+    opacity: 0.9; /* Hover effect for confirm button */  
+}

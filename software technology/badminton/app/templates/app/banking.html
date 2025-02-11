@@ -1,0 +1,58 @@
+{% extends 'app/home.html' %}  
+{% load static %}  
+{% block main_content %}   
+  <div class="banking-container">  
+    <div class="banking-header">  
+      <h1>Chuyển khoản ngân hàng</h1>  
+    </div>  
+
+    <div class="banking-details">  
+      <div class="bank-info-group">  
+        <div class="bank-info-row">  
+          <span class="bank-info-label">Ngân hàng:</span>  
+          <span class="bank-info-value" id="bankName">MB Bank</span>  
+        </div>  
+        <div class="bank-info-row">  
+          <span class="bank-info-label">Số tài khoản:</span>  
+          <span class="bank-info-value" id="accountNumber">0915907623</span>  
+        </div>  
+        <div class="bank-info-row">  
+          <span class="bank-info-label">Chủ tài khoản:</span>  
+          <span class="bank-info-value" id="accountHolder"></span>  
+        </div>  
+        <div class="bank-info-row">  
+          <span class="bank-info-label">Số tiền:</span>  
+          <span class="bank-info-value" id="amount">0 đ</span>  
+        </div>  
+        <div class="bank-info-row">  
+          <span class="bank-info-label">Nội dung chuyển khoản:</span>  
+          <span class="bank-info-value banking-important" id="transferContent">WS...</span>  
+        </div>  
+      </div>  
+
+      <div class="qr-banking-section">  
+        <h3>Quét mã QR để thanh toán</h3>  
+        <div class="qr-code-container">  
+          <img  
+            id="qrCode"  
+            src="https://img.vietqr.io/image/MB-0915907623-qr_only.png"  
+            alt="QR Code thanh toán"  
+          />  
+        </div>  
+        <p class="banking-instructions">  
+          Sử dụng ứng dụng ngân hàng để quét mã QR và thanh toán.<br />  
+          Sau khi chuyển khoản thành công, vui lòng nhấn "Xác nhận đã thanh  
+          toán".  
+        </p>  
+      </div>  
+
+      <div class="banking-button-group">  
+        <a href="{% url 'payment' %}" class="banking-btn banking-btn-back">Quay lại</a>   
+        <button class="banking-btn banking-btn-confirm" id="confirmButton">  
+          Xác nhận đã thanh toán  
+        </button>  
+      </div>  
+    </div>  
+  </div>  
+{% endblock main_content %}
+{% block footer %}{% endblock footer %}

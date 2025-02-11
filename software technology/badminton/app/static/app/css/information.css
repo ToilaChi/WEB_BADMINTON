@@ -1,0 +1,79 @@
+.information-container {  
+    display: flex;  
+}  
+
+.information-sidebar {  
+    background-color: #fff;  
+    width: 250px;  
+    padding: 20px;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}  
+
+.information-profile {  
+    text-align: center;  
+    margin-bottom: 30px;  
+}  
+
+.information-profile-picture {  
+    width: 80px;  
+    height: 80px;  
+    background-color: #ccc;  
+    border-radius: 50%;  
+    margin: 0 auto;  
+}  
+
+.information-sidebar nav {
+    margin-top: 60px;
+}
+
+.information-sidebar ul {  
+    list-style-type: none;  
+    padding: 0;  
+}  
+
+.information-sidebar li {  
+    padding: 10px 0;  
+    cursor: pointer;
+    font-weight: 600;  
+}  
+ 
+.information-sidebar a {  
+    text-decoration: none;  
+    color: #008B8B; 
+}
+
+.information-main-content {  
+    flex-grow: 1;  
+    padding: 20px;  
+    background-color: #fff;  
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);  
+}  
+
+.information-main-content h1 {  
+    margin-bottom: 20px;  
+} 
+
+input,   
+select,   
+textarea {  
+    width: 100%;  
+    padding: 10px;  
+    margin-top: 5px;  
+    border: 1px solid #ccc;  
+    border-radius: 4px;  
+    margin-bottom: 20px;
+}  
+
+button {  
+    margin-top: 20px;  
+    padding: 10px;  
+    background-color: #008B8B;  
+    color: white;  
+    border: none;  
+    border-radius: 4px;  
+    cursor: pointer;  
+}  
+
+button:hover {  
+    background-color: #007B7B;  
+}  
