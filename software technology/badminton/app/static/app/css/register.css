@@ -1,0 +1,73 @@
+/* Đặt nền cho trang đăng ký */  
+.registration-background {  
+    background-size: cover; /* Đảm bảo hình ảnh phủ toàn bộ */  
+    background-position: center; /* Trung tâm hình ảnh */  
+    height: 100vh; /* Chiếm toàn bộ chiều cao */  
+}  
+
+/* Container cho form đăng ký */  
+.registration-form-container {  
+    position: absolute;  
+    top: 50%;  
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    width: 600px;  
+    background: rgba(255, 255, 255, 0.9); /* Màu nền sáng vừa phải */  
+    border-radius: 10px;  
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);  
+    padding: 20px; /* Thêm padding cho container */  
+}  
+
+/* Tiêu đề của form */  
+.registration-form-container h1 {  
+    text-align: center;  
+    margin-bottom: 20px;
+    margin-top: 100px;
+}  
+
+/* Định nghĩa cho các nhóm nhập liệu */   
+
+/* Định dạng cho các trường nhập liệu */  
+.input-group input,   
+.register-group input {  
+    width: 100% !important; /* Chiều rộng 100% */  
+    height: 40px; /* Chiều cao trường nhập */  
+    border: 1px solid #2196F3; /* Màu viền giống nhau cho tất cả các trường */  
+    padding: 10px; /* Thêm padding cho trường nhập */  
+    border-radius: 5px; /* Bo góc cho trường nhập */  
+    box-sizing: border-box; /* Đảm bảo box model bao gồm padding và border */  
+    font-size: 16px; /* Kích thước font chữ */  
+}  
+
+/* Định dạng cho link đăng nhập */  
+.login-link {  
+    margin-top: 20px; /* Khoảng cách trên */  
+    text-align: center; /* Căn giữa */  
+    font-size: 14px; /* Kích thước font chữ */  
+}  
+
+.login-link a {  
+    color: #2196F3; /* Màu link */  
+    text-decoration: none; /* Không có gạch chân */  
+}  
+
+.login-link a:hover {  
+    text-decoration: underline; /* Hiệu ứng khi hover lên link */  
+}  
+
+/* Định dạng cho nút đăng ký */  
+input[type="submit"] {  
+    width: 100% !important; /* Chiều rộng 100% cho nút đăng ký */  
+    height: 40px; /* Chiều cao nút */  
+    background-color: #2196F3; /* Màu nền của nút */  
+    color: white; /* Màu chữ trên nút */  
+    border: none; /* Không có viền */  
+    border-radius: 5px; /* Bo góc cho nút */  
+    font-size: 16px; /* Kích thước font chữ */  
+    cursor: pointer; /* Hiệu ứng con trỏ khi hover */  
+}  
+
+input[type="submit"]:hover {  
+    background-color: #0b7dda; /* Thay đổi màu nền khi hover */  
+}
+

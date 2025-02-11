@@ -1,0 +1,65 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block main_content %}
+{% block main_header %}{% endblock main_header %}
+
+<body class="registration-background" style="background-image: url('{% static 'app/images/backgroundcaulong.png' %}'); background-size: cover; background-position: center;">
+    <div class="registration-form-container">
+        <h1>ĐĂNG KÝ</h1>
+
+        {% if messages %}
+        <div class="messages">
+            {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="input-group">
+                {{ form.name }}
+                {% if form.name.errors %}
+                <span class="error-message">{{ form.name.errors|join:", " }}</span>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                {{ form.phone }}
+                {% if form.phone.errors %}
+                <span class="error-message">{{ form.phone.errors|join:", " }}</span>
+                {% endif %}
+            </div>
+            <div class="register-group">
+                {{ form.email }}
+                {% if form.email.errors %}
+                <span class="error-message">{{ form.email.errors|join:", " }}</span>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                {{ form.password }}
+                {% if form.password.errors %}
+                <span class="error-message">{{ form.password.errors|join:", " }}</span>
+                {% endif %}
+            </div>
+            <div class="input-group">
+                {{ form.password2 }}
+                {% if form.password2.errors %}
+                <span class="error-message">{{ form.password2.errors|join:", " }}</span>
+                {% endif %}
+            </div>
+            {% if form.non_field_errors %}
+            <div class="error-message">
+                {{ form.non_field_errors|join:", " }}
+            </div>
+            {% endif %}
+            <input type="submit" value="Đăng ký" />
+            <div class="login-link">
+                Bạn đã là thành viên? <a href="{% url 'login' %}">Đăng nhập</a>
+            </div>
+        </form>
+    </div>
+</body>
+{% endblock main_content %}
+{% block footer %}{% endblock footer %}
