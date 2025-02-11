@@ -1,0 +1,75 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block main_content %}  
+<div class="header1">   
+  <div class="header-center">  
+    <div class="button-group">  
+      <a href="{% url 'courtoption2' %}" class="booking-button">Đặt sân cố định</a>  
+    </div>   
+    <div class="legend">  
+      <div class="legend-item">  
+        <div class="color-box empty"></div>  
+        <span>Trống</span>  
+      </div>  
+      <div class="legend-item">  
+        <div class="color-box booked"></div>  
+        <span>Đã đặt</span>  
+      </div>  
+      <div class="legend-item">  
+        <div class="color-box selected"></div>  
+        <span>Đang chọn</span>  
+      </div>  
+    </div>  
+
+    <div class="layout-container"> <!-- Container cho lịch -->  
+      <div class="calendar-container">  
+        <h2>Lịch đặt sân</h2>  
+        <div id="calendar"></div>  
+      </div>  
+    </div>  
+  </div>  
+</div> 
+
+<div class="table-container">
+  <table class="booking-table">
+      <thead>
+          <tr>
+              <th class="fixed-column">Sân</th>
+              {% for time_slot in time_slots %}
+              <th>
+                  <div>{{ time_slot.start_time|time:"H:i" }}-{{ time_slot.end_time|time:"H:i" }}</div>
+              </th>
+              {% endfor %}
+          </tr>
+      </thead>
+      <tbody>
+          {% for schedule in court_schedule %}
+          <tr class="branch-nvl">
+              <td class="fixed-column">{{ schedule.court.name }}</td>
+              {% for slot in schedule.slots %}
+              <td class="slot {{ slot.status }}" 
+                  data-court-id="{{ schedule.court.id }}"
+                  data-time-slot-id="{{ slot.time_slot.id }}"
+                  data-price="{{ slot.time_slot.price }}">
+              </td>
+              {% endfor %}
+          </tr>
+          {% endfor %}
+      </tbody>
+  </table>
+</div>
+
+<div class="court-footer">  
+  <div class="selection-info">  
+    <div class="total-time">Đang chọn: 00h00</div>  
+    <div class="total-price-bookedprice">Tổng: 0 đ</div>  
+  </div>  
+  <a href="{% url 'payment' %}" class="next-button">Tiếp theo</a>  
+</div>  
+
+{% csrf_token %}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.9/flatpickr.min.js" defer></script> 
+{% endblock main_content %}
+{% block footer %}{% endblock footer %}
+

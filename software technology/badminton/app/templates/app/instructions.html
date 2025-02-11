@@ -1,0 +1,107 @@
+{% extends 'app/home.html' %}
+{% load static %}
+{% block main_content %}
+
+                                                        <!-- phần đầu tiên ko bt gọi là gì nữa-->
+<div class="badminton-pricing"> 
+    <div class="badminton-pricing-section"> 
+        <h1>HƯỚNG DẪN ĐẶT SÂN</h1>  
+        <h2>sân câu lông Ways Station Badminton</h2>  
+    </div>  
+    <div class="content-section"> 
+        <h3>Hệ thống Sân cầu lông máy lạnh</h3>  
+        <h3>Ways Station Badminton</h3>  
+        <div class="feature-list"> 
+            <p>* Vệ sinh phòng 24/7</p>  
+            <p>* Mượn vợt miễn phí (4 cây/sân)</p>  
+            <p>* Trà đá, khăn, tắm, giữ xe miễn phí</p>  
+            <p>* Luôn lắng nghe hội viên</p>  
+        </div>  
+        <div class="price-info">
+            <p>Giá: 139k/gió (mọi khung giờ, mọi chi nhánh)</p>  
+            <p>Mở 24/24 (sau 22h - 6h gọi cửa)</p>  
+        </div>  
+    </div>  
+</div>  
+                                                                <!--end-->
+
+
+
+
+
+                                                            <!--video hướng dẫn đặt sân-->
+<div class="video-container">  
+    <div class="video-container-text">  
+        <h1>Video hướng dẫn đặt sân (xem kỹ trước khi đặt)</h1>  
+        <div class="video-container-alert-box">  
+            <p>Bỏ chọn sân không cần check trước khi thao tác đặt để tránh nhầm sân</p>  
+        </div>   
+        <div class="video-container-brand-logo">  
+            <img src="{%static 'app/images/huongdandatsan.png'%}" alt="Logo VAS">  
+        </div>  
+    </div>  
+    <div class="video-container-mp4">  
+        <iframe width="600" height="422" src="https://www.youtube.com/embed/fhbewRr3gbI" title="Video hướng dẫn đặt sân 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> 
+    </div>  
+</div> 
+                                                                        <!--end-->
+
+
+
+
+                                                        <!--hướng dẫn đặt sân bằng chữ-->
+<div class="instruction-container">  
+    <h2>HƯỚNG DẪN ĐẶT SÂN</h2>  
+    <ol>  
+        <li>Truy cập website đặt sân</li>  
+        <li>Chọn sân mà bạn muốn check bằng cách bỏ chọn các chi nhánh mà bạn không cần check</li>  
+        <li>Chọn ngày mà bạn muốn đặt</li>  
+        <li>Di chuyển tới khung giờ mà bạn muốn đặt, ấn vào ô khung giờ tương ứng</li>  
+        <li>Check kỹ đúng ô cần đặt. Nếu đúng, kéo xuống phía dưới màn hình, chọn "Tiếp theo"</li>  
+        <li>Nhập Tên, Số điện thoại, Email, nhớ check kỹ các thông tin thật chính xác và nhập mã voucher nếu có. Nếu không có mã voucher, chọn "Xác nhận và thanh toán"</li>  
+        <li>Ở màn hình thông tin thanh toán, bạn tuyệt đối không tắt trang này, bạn chụp lại ảnh mã QR code và chuyển sang ứng dụng thanh toán</li>  
+        <li>Ở ứng dụng thanh toán, bạn chọn thanh toán từ ảnh mã có sẵn, chọn hình chụp màn hình vừa chụp, chọn "Tiếp tục thanh toán" và xác nhận. <br>(Nếu bạn chuyển thủ công chứng bằng quét mã QR thì hãy chuyển đúng thông tin nội dung chuyển khoản đã ghi (là mã đơn hàng) để hệ thống xác nhận tự động. Ways không chịu trách nhiệm giữ sân nếu bạn chuyển sai nội dung khiến hệ thống không xác nhận được đơn. Trường hợp này bạn hãy gọi 0389145575 để được hỗ trợ)</li>  
+        <li>(Bắt buộc) Sau khi thanh toán thành công, quay lại màn hình thanh toán trên website của Ways, đợi cho trường nút "Kiểm tra" đếm ngược 1 phút để nút, sau đó chọn nút "Kiểm tra giao dịch" để hệ thống kiểm tra tình trạng đơn. Nếu chưa chuyển khoản hoặc chuyển khoản sai nội dung chuyển khoản "WSB********", hệ thống báo "Chưa thanh toán" và tiếp 1 phút nữa để nút "Kiểm tra" mở lại đợi giao dịch chuyển khoán thành công. Nếu đã thành công, hệ thống sẽ chuyển sang trang đã thanh toán và gửi email xác nhận thành công đến bạn, hãy check cả trong spam.</li>  
+    </ol> 
+    <a href="{% url 'court' %}" class="book-now-button">Vào trang Đặt sân ngay</a> 
+</div> 
+                                                                <!--end-->
+
+
+
+
+
+ <div class="note-container">  
+        <h1 class="note-title">LƯU Ý KHI ĐẶT SÂN WAYS STATION</h1>  
+        <p class="note-highlight">  
+            Bỏ chọn sân không cần check trước khi thao tác đặt để tránh nhầm sân  
+        </p>  
+        <ul class="note-list">  
+            <li>Giữ sân cách nhau 5 phút để nhân viên dọn sân, nếu bạn đặt liên 2 giờ cạnh nhau thì 5 phút đó sẽ liên tục.</li>  
+            <li>Check kỹ ngày sân, giờ sân, tránh đặt giờ đã qua hoặc quá khứ.</li>  
+            <li>Khi ở bước thanh toán, không tắt trang thông tin thanh toán, hãy quét mã QR và thanh toán, sau đó, quay lại trang ẩn nút "Đã thanh toán" để hệ thống kiểm tra đơn đặt thành công chưa.</li>  
+            <li>Đặt sân online, thanh toán 100% vì Ways không có thử ngân tại tiệm.</li>  
+            <li>Email xác nhận đặt lịch thành công sẽ gửi qua email bạn đã điền, từ địa chỉ admin@ways.io.vn, nhớ check kỹ chính xác thông tin email (viết sai email thì hệ thống không gửi mail xác nhận được).</li>  
+            <li>Trong trường hợp đó sân đó vẫn trống nhưng báo lỗi không đặt được, hãy gọi ngay 038.914.5575 để được hỗ trợ nhé.</li>  
+            <li>Lịch đã chốt sẽ không thể hủy,dời lịch,WAYS có thể hỗ trợ bạn pass sân qua nhóm zl,FB,MESS miễn phí.</li>
+            <li>Ở bước thanh, nếu bạn chuyển thủ công chứ không chuyển bằng quyét qr thì hãy chuyển đúng thông tin nội dung chuyển khoản đã ghi (là mã đơn hàng) để hệ thống xác nhận tự động. 
+                WAYS không chịu trách nhiệm giữ sân nếu bạn chuyển khoản sai nội dung khiến hệ thống không xác nhận được đơn. Trường hợp này bạn hãy gọi 0389145575 để được hỗ trợ </li>   
+
+        </ul>  
+    </div> 
+
+
+                                                                <!--đặt sân online-->
+   <div class="booking-container">  
+        <div class="text-content">  
+            <h1 class="header-title">WEB ĐẶT SÂN ONLINE</h1>  
+            <p class="sub-description">Thử nghiệm Website Đặt sân cầu lồng máy lạnh Ways Station Badminton</p>  
+            <a href="{% url 'court' %}" class="cta-button">Vào trang Đặt sân ngay</a>  
+        </div>  
+        <div class="image-display">  
+            <img src="{%static 'app/images/datsanonline.png'%}" alt="booking online">  
+        </div>  
+    </div> 
+                                                                        <!--end-->
+{% endblock main_content %}
+</html>

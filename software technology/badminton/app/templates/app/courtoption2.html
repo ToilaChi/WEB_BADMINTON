@@ -1,0 +1,55 @@
+{% extends 'app/home.html' %}  
+{% load static %}  
+{% block main_content %}  
+    <div class="box">  
+        <h1>ĐẶT LỊCH CỐ ĐỊNH</h1>  
+        <form id="fixedScheduleForm" action="{% url 'bookingcourt' %}" method="POST">  
+            <!-- Chọn sân -->  
+            {% csrf_token %}
+            <label class="form-label" for="court">Chọn sân:</label>  
+            <select id="courtSelect" name="court" class="custom-select" required aria-label="Chọn sân">
+                <option value="" disabled selected>Chọn sân</option>  
+                {% for schedule in court_schedule %}  
+                    <option value="{{ schedule.court.id }}"
+                            data-price="{{ schedule.court.price }}"
+                            data-court-id="{{ schedule.court.id }}"
+                            data-time-slot-id="{{ slot.time_slot.id }}">
+                        {{ schedule.court.name }}
+                    </option>
+                {% endfor %}
+            </select> 
+            
+            <!-- Ngày bắt đầu và kết thúc -->  
+            <label class="form-label" for="startDateInput">Ngày bắt đầu:</label>
+            <input type="date" id="startDateInput" name="startDate" required placeholder="Chọn ngày bắt đầu" />
+
+            <label class="form-label" for="endDateInput">Ngày kết thúc:</label>
+            <input type="date" id="endDateInput" name="endDate" required placeholder="Chọn ngày kết thúc" /> 
+
+            <!-- Chọn ngày trong tuần -->  
+            <label class="form-label">Chọn ngày trong tuần:</label>  
+            <div class="weekdays">  
+                {% for day in weekdays %}
+                    <label>
+                        <input type="checkbox" name="days" value="{{ day.value }}" /> {{ day.label }}
+                    </label>  
+                {% endfor %}
+            </div>
+
+            <!-- Chọn khung giờ -->  
+            <label class="form-label" for="timeSlot">Chọn khung giờ:</label>  
+            <select id="timeSlotSelect" name="timeSlot" class="custom-select" required aria-label="Chọn khung giờ">
+                <option value="" disabled selected>Chọn khung giờ</option>  
+                {% for time_slot in time_slots %}
+                    <option value="{{ time_slot.id }}" data-price="{{ time_slot.price }}">
+                        {{ time_slot.start_time|time:"H:i" }}-{{ time_slot.end_time|time:"H:i" }}
+                    </option>
+                {% endfor %}
+            </select>  
+
+            <!-- Nút đặt lịch -->  
+            <button type="submit" class="book">Đặt lịch</button>  
+        </form>  
+    </div> 
+{% endblock main_content %}  
+{% block footer %}{% endblock footer %}
