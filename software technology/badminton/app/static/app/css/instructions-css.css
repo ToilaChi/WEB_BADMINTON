@@ -1,0 +1,265 @@
+
+
+                                                                /* phần đầu tiên*/
+.badminton-pricing {  
+    background-color: #009688; 
+    border-radius: 15px; 
+    padding: 20px;  
+    max-width: 40%; 
+    margin: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+    margin-top: 50px;
+}  
+
+.badminton-pricing-section {  
+    text-align: center; 
+    margin-bottom: 20px; 
+}  
+
+.badminton-pricing-section h1 {  
+    font-size: 36px;
+    margin: 0;
+    color: #00bcd4; 
+}  
+
+.badminton-pricing-section h2 {  
+    font-size: 24px;  
+    margin: 0;
+    color: #fff;   
+}  
+
+.content-section h3 {  
+    font-size: 20px; 
+    margin: 10px 0; 
+    background-color: #009688; 
+    padding: 10px; 
+    border-radius: 5px;
+    color: #fff; 
+}  
+
+.feature-list { 
+    margin: 20px 0;  
+    background-color: #ffcc00; 
+    padding: 15px;  
+    border-radius: 5px; 
+}  
+
+.feature-list p {  
+    margin: 5px 0; 
+    color: #000; 
+}  
+
+.price-info {  
+    background-color: #ff9800;
+    padding: 10px;
+    border-radius: 5px; 
+    text-align: center; 
+    color: #fff; 
+}   
+
+                                                                                /* end*/
+
+
+
+                                                                                /* video hướng dẫn đặt sân*/
+
+.video-container {  
+    display: flex;  
+    justify-content: space-between;  
+    padding: 20px;  
+}  
+
+.video-container-text {  
+    flex: 1;  
+    padding: 20px;  
+}  
+
+.video-container-mp4 {  
+    flex: 1;  
+    padding: 20px;  
+    
+}  
+
+.video-container-text h1 {  
+    font-size: 24px;  
+    color: #009688;
+    text-align: center;
+}  
+
+.video-container-alert-box {  
+    background-color: red;  
+    color: white;  
+    padding: 10px;  
+    margin: 20px 0;  
+    font-weight: bold;  
+    text-align: center;
+}  
+
+.video-container-quick-info {  
+    margin: 10px 0;  
+}  
+
+.video-container-brand-logo img {  
+    width: 800px; 
+    height: auto;  
+}  
+
+                                                                    /* end*/
+
+
+
+
+                                                        /* hướng dẫn đặt sân bằng chữ */
+.instruction-container {  
+    background-color: #009688; 
+    color: #fff; 
+    padding: 20px;  
+    border-radius: 8px;  
+    max-width: 100%px; 
+    margin: auto; 
+}  
+.instruction-container h2 {  
+    font-size: 24px; 
+    margin-bottom: 16px; 
+    color: #111111;
+    text-align: center;
+}  
+
+.instruction-container ol {  
+    padding-left: 20px; 
+}  
+
+.instruction-container li {  
+    margin-bottom: 10px; 
+}  
+.book-now-button {  
+    display: inline-block; 
+    background-color: #ff7f50; 
+    color: #ffffff;
+    border: none; 
+    padding: 15px 30px; 
+    border-radius: 5px;
+    cursor: pointer; 
+    font-size: 18px; 
+    text-align: center; 
+    margin-top: 20px; 
+    text-decoration: none; 
+}  
+
+.book-now-button:hover {  
+    background-color: #ff6347; 
+}  
+
+
+                                                                    /*end*/
+
+                                                                 /* lưu ý khi đặt sân */
+
+.note-container {  
+    background-color: #009688; 
+    padding: 20px;  
+    border-radius: 8px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    margin-top: 30px;
+}  
+
+.note-title {  
+    font-size: 24px;   
+    margin-bottom: 15px;  
+}  
+
+.note-highlight {  
+
+    color: #fff;  
+    padding: 10px;  
+    border-radius: 4px; 
+    margin: 15px 0; 
+    font-weight: bold;
+}  
+
+.note-list {  
+    list-style-type: disc; 
+    padding-left: 20px; 
+}  
+
+.note-list li {  
+    margin-bottom: 10px; 
+    line-height: 1.6; 
+    color: #ffffff;
+}  
+
+                                                                    /* end */
+
+
+
+
+
+                                                                    /*đặt sân online */
+
+
+.booking-container {
+    text-align: center;
+    color: #009688  ;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header-title {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.sub-description {
+    font-size: 20px;
+    margin: 20px 0 30px;
+    line-height: 1.5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #FF5722;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #F4511E;
+}
+
+.image-display {
+    margin-top: 30px;
+}
+
+.image-display img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 32px;
+    }
+
+    .sub-description {
+        font-size: 16px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+}
+                                                                        /* end*/
