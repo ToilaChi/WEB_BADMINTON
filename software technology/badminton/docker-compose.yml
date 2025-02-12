@@ -1,0 +1,28 @@
+version: "3.4"
+
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+
+  db:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      POSTGRES_USER: phamminhchi
+      POSTGRES_PASSWORD: minhtri123
+      POSTGRES_DB: djangoDB
+    volumes:
+      - db_data:/var/opt/mssql
+    ports:
+      - "1433:1433"
+
+volumes:
+  db_data:
