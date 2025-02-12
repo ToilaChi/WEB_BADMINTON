@@ -1,0 +1,12 @@
+{% extends 'app/home.html' %}
+{% block main_content %}
+<div class="verification-container">
+    <div class="verification-box">
+        <h1 class="success-title">Xác thực thành công!</h1>
+        <p class="success-message">Tài khoản của bạn đã được kích hoạt.</p>
+        <div class="action-buttons">
+            <a href="{% url 'login' %}" class="login-button">Đăng nhập ngay</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

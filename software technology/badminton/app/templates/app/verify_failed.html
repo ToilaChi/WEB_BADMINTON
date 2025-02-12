@@ -1,0 +1,12 @@
+{% extends 'app/home.html' %}
+{% block main_content %}
+<div class="verification-container">
+    <div class="verification-box">
+        <h1 class="failed-title">Xác thực thất bại!</h1>
+        <p class="failed-message">Link xác thực không hợp lệ hoặc đã hết hạn.</p>
+        <div class="action-buttons">
+            <a href="{% url 'register' %}" class="register-button">Đăng ký lại</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

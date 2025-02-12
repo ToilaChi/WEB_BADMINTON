@@ -1,0 +1,82 @@
+{% extends 'app/home.html' %}  
+{% load static %}  
+{% block main_content %}  
+<body class="registration-background" style="background-image: url('{% static 'app/images/backgroundcaulong.png' %}'); background-size: cover; background-position: center;">  
+  <div class="payment-container">
+    <div class="payment-header">
+        <h1 class="payment-header-title">Xác nhận đặt sân cố định</h1>
+    </div>
+
+    <div class="booking-summary">
+        <h2 class="booking-summary-title">Thông tin đặt sân</h2>
+        <div class="booking-summary-item">
+            <span class="summary-label">Sân:</span>
+            <span id="courtNumber" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Thời gian:</span>
+            <span id="timeSlot" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Từ ngày:</span>
+            <span id="startDate" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Đến ngày:</span>
+            <span id="endDate" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Thứ đã đặt:</span>
+            <span id="daysSummary" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Giá 1 buổi:</span>
+            <span id="pricePerSession" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Tổng số buổi:</span>
+            <span id="totalSessions" class="summary-value">Đang tải...</span>
+        </div>
+        <div class="booking-summary-item">
+            <span class="summary-label">Tổng tiền:</span>
+            <span id="totalAmount" class="summary-value">Đang tải...</span>
+        </div>
+    </div>
+
+    <div class="payment-form">
+        <form id="paymentForm">
+            <h2 class="payment-form-title">Thông tin thanh toán</h2>
+            <div class="payment-form-group">
+                <label for="name" class="payment-form-label">Họ và tên</label>
+                <p class="payment-form-value">{{ user.name }}</p>
+            </div>
+
+            <div class="payment-form-group">
+                <label for="phone" class="payment-form-label">Số điện thoại</label>
+                <p class="payment-form-value">{{ user.phone }}</p>
+            </div>
+
+            <div class="payment-form-group">
+                <label for="email" class="payment-form-label">Email</label>
+                <p class="payment-form-value">{{ user.email }}</p>
+            </div>
+
+            <div class="payment-form-group">  
+                <label class="payment-methods-label">Phương thức thanh toán *</label>   
+                    <div class="payment-method selected">  
+                        <div class="payment-method-name">Chuyển khoản</div>  
+                        <small class="payment-method-description">Chuyển khoản ngay</small>  
+                    </div>  
+            </div>  
+
+            <div class="payment-button-group">
+                <a href="{% url 'courtoption2' %}" class="btn btn-back">Quay lại</a>
+                <a href="{% url 'banking' %}" class="btn btn-payment-confirm">
+                    Xác nhận đặt sân
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+{% endblock main_content %}
+{% block footer %}{% endblock footer %}
