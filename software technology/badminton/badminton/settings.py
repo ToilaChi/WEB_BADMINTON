@@ -1,3 +1,4 @@
+
 """
 Django settings for badminton project.
 
@@ -48,7 +49,10 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'app.middleware.RoleMiddleware'
 ]
+
+CSRF_TRUSTED_ORIGINS = ['http://localhost:8000']
 
 ROOT_URLCONF = 'badminton.urls'
 
@@ -70,16 +74,35 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'badminton.wsgi.application'
 
-
+AUTH_USER_MODEL = 'app.User'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+    'default':{
+        'ENGINE':'mssql',                    # Must be "mssql"
+        'NAME':'django',                       # DB name "test"
+        'HOST':'DESKTOP-VMTQQB6\\SQLEXPRESS', # <server>\<instance>
+        # 'HOST':'db', # <server>\<instance>
+        'USER':'phamminhchi',
+        'PASSWORD':'minhtri123',
+        # 'PORT': 1433,                           # Keep it blank
+        'OPTIONS': {
+            'driver': 'ODBC Driver 17 for SQL Server',
+            'Trusted_Connection': 'yes',
+        },
     }
 }
+
+# Email setting
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'  # Hoặc SMTP server của bạn
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'chi12345pham@gmail.com'
+EMAIL_HOST_PASSWORD = 'mfqg hjqn rrkc otam'
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+SITE_URL = 'http://localhost:8000'
 
 
 # Password validation
@@ -106,7 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Ho_Chi_Minh'
 
 USE_I18N = True
 
@@ -122,3 +145,6 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+
